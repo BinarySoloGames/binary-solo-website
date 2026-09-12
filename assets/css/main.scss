@@ -106,19 +106,25 @@ button.bg-secondary:focus {
   margin-right: auto;
   margin-left: auto; }
 
-@media (min-width: 576px) {
+@media (max-width: 576px) {
   .container {
     max-width: 540px; } }
 
-@media (min-width: 768px) {
+@media (max-width: 680px) {
+  .container {
+    max-width: 650px;
+  }
+}
+
+@media (max-width: 768px) {
   .container {
     max-width: 720px; } }
 
-@media (min-width: 992px) {
+@media (max-width: 992px) {
   .container {
     max-width: 960px; } }
 
-@media (min-width: 1200px) {
+@media (max-width: 1200px) {
   .container {
     max-width: 1140px; } }
 
@@ -140,15 +146,23 @@ button.bg-secondary:focus {
 	margin: 20px;
 }
 
-#brandImage 
+#brandImage
 {
-	width: 300px;
-	height: auto;
+  width: 100px;
+  height: auto;
+}
 
-	animation: shrink-image cubic-bezier(0, 0, 0.325, 1.0);
+@media (min-width: 680px) {
+  #brandImage
+  {
+	  width: 300px;
+	  height: auto;
+
+  	animation: shrink-image cubic-bezier(0, 0, 0.325, 1.0);
     animation-timeline: scroll(root);
     animation-range: 0px 500px;
     animation-fill-mode: forwards;
+  }
 }
 
 @keyframes shrink-image {
@@ -206,17 +220,32 @@ ul ol {
 	text-align: right;
 }
 
+@media (max-width: 680px) {
+  .left {
+    text-align: left;
+  }
+
+  .center {
+    text-align: left;
+    margin: 0;
+  }
+
+  .right {
+    text-align: left;
+  }
+}
+
 header 
 { 
 	display: flex;
 	height: 80px;
 
 	position: fixed;
-    left: 0;
-    right: 0;
-    top: 0;
+  left: 0;
+  right: 0;
+  top: 0;
 
-    z-index: 2;
+  z-index: 2;
 }
 
 header ul 
@@ -240,6 +269,22 @@ header ul li:hover
 {
 	border-bottom: 8px solid #1687ad;
 	border-radius: 0px 0px 5px 5px;
+}
+
+@media (max-width: 680px) {
+  header .container {
+    padding: 0;
+  }
+
+  header ul {
+    padding-inline-start: 0px;
+  }
+
+  header ul li {
+    font-size: 0.8em;
+    margin: 0px 2px;
+    width: fit-content;
+  }
 }
 
 
@@ -286,6 +331,20 @@ section.hero .copy p {
   color: white;
 }
 
+@media (max-width: 900px) {
+  section.hero .copy {
+    text-align: center;
+    margin: 0 auto;
+  }
+  section.hero .copy h1 {
+    font-size: 2rem;
+  }
+  section.hero .copy p {
+    text-align: center;
+    margin: 0 auto;
+  }
+}
+
 section 
 {
 	margin-top: 5rem;
@@ -309,17 +368,11 @@ section.about h1
   box-shadow: 0 34px 17px -17px #0F3A57;
 }
 
-@media (max-width: 900px) {
-  section.hero .copy {
-    text-align: center;
-    margin: 0 auto;
-  }
-  section.hero .copy h1 {
-    font-size: 40px;
-  }
-  section.hero .copy p {
-    text-align: center;
-    margin: 0 auto;
+@media (max-width: 680px) {
+  section.about h1 {
+    font-size: 1.75rem;
+    margin-bottom: 3rem;
+    box-shadow: 0 34px 17px -17px #0F3A57;
   }
 }
 
@@ -345,6 +398,12 @@ section.hero .wrapper {
     rotate: -5deg;
     margin-left: -100px;
     border-radius: 4px;
+}
+
+@media (max-width: 680px) {
+  .section-heading-background {
+    width: 450px;
+  }
 }
 
 .page-section-heading
@@ -397,6 +456,18 @@ section.hero .wrapper {
 .col-4:last-child {
   margin-left: auto;
   margin-right: auto;
+}
+
+@media (max-width: 680px) {
+  .col-4 {
+    flex: 0 0 90%;
+    max-width: 90%;
+    padding: 0%;
+  }
+
+  .col-4:last-child {
+    margin: 0;
+  }
 }
 
 .portfolio-item
