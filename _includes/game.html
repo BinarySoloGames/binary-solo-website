@@ -1,0 +1,8 @@
+{% assign game = include.game %}
+<div class="game-card col-4">
+	<div class="portfolio-item mx-auto">
+		<h1>{{ game.name }}</h1>
+		<img src="{{ game.cover }}" />
+		<p>{{ game.description | newline_to_br}}</p>
+	</div>
+</div>
