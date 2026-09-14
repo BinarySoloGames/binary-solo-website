@@ -4,7 +4,7 @@ title: Binary Solo
 ---
 
 <section class="hero">
-	<div class="background-image" style="background-image: url('assets/images/hisato-hero.webp')"></div>
+	<div class="background-image"></div>
 	<div class="wrapper">
 		<div class="copy container">
 			<h1>Hisato no Saku</h1>

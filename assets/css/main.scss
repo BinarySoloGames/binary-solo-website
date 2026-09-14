@@ -67,6 +67,9 @@
         U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
+.container, .container::before, .container::after {
+  box-sizing: border-box;
+}
 
 body 
 {
@@ -112,7 +115,7 @@ button.bg-secondary:focus {
 
 @media (max-width: 680px) {
   .container {
-    max-width: 650px;
+    max-width: 645px;
   }
 }
 
@@ -307,6 +310,7 @@ section.hero .background-image {
   background-blend-mode: darken;
   background-size: cover;
   background-color: var(--transparent-cover);
+  background-image: url('/assets/images/hisato-hero.webp');
   will-change: transform;
 }
 
@@ -463,10 +467,11 @@ section.hero .wrapper {
     flex: 0 0 90%;
     max-width: 90%;
     padding: 0%;
+    margin: auto;
   }
 
   .col-4:last-child {
-    margin: 0;
+    margin: auto;
   }
 }
 
